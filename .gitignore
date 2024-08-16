@@ -4,9 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/img
 # testing
 /coverage
+.gitignore
 
 # production
 /build
