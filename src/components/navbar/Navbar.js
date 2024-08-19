@@ -44,21 +44,21 @@ const Navbar = () => {
           <i class="ri-menu-3-line w-full text-xl" onClick={() => setShow(!show)}></i>
      </div> :
 
-      <div className='absolute h-screen  border-2 w-1/2 bg-gray-500 text-white top-0 right-0 '>
+      <div className='absolute h-screen border border-1 w-1/2 bg-gray-900/50 backdrop-blur-md text-white top-0 right-0 '>
      <i onClick={() => setShow(!show)} class="ri-close-fill text-3xl block my-2"></i>
       
         <div className="sidenav flex flex-col items-center justify-center space-y-9 my-4">
         <ul className="flex flex-col text-sm justify-center space-y-9 items-center">
-        <li>
+        <li onClick={() => setShow(!show)}>
              <HashLink to="/#welcome" className="hover:text-lime-400 ">Home</HashLink>  
           </li>
-          <li>
+          <li onClick={() => setShow(!show)}>
              <HashLink to="/#aboutUs" className="hover:text-lime-400 ">About Us</HashLink>  
           </li>
-          <li>
+          <li onClick={() => setShow(!show)}>
              <HashLink to="/#Store" className="hover:text-lime-400 ">Store</HashLink>  
           </li>
-          <li>
+          <li onClick={() => setShow(!show)}>
           <HashLink to="/#contactUs" className="hover:text-lime-400 ">
                   Contact Us
             </HashLink>          
@@ -66,9 +66,9 @@ const Navbar = () => {
         </ul>
         <button
           type="button"
-          className=" px-4 py-1 bg-lime-400 w-20 rounded-lg"
+          className=" px-4 py-1 text-black text-sm bg-lime-400 w-20 rounded-lg"
         >
-            <Link to='/login' className='text-base '>Log in</Link>
+            <Link to='/login'>Log in</Link>
         </button>
       </div>
         </div>
