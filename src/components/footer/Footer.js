@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.css'
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
   return (
@@ -14,10 +15,10 @@ const Footer = () => {
         <div className="max-w-24 md:flex flex-col justify-center  items-center md:max-w-[250px]">
           <h2 className="text-sm md:text-xl text-yellow-400 mb-2 md:mb-4 transition-colors duration-300">Quick Links</h2>
           <ul className='leading-none'>
-            <li><a href="#" className="text-xs md:text-base duration-300">Home</a></li>
-            <li><a href="#aboutUS" className="text-xs md:text-base transition-colors duration-300">About Us</a></li>
-            <li><a href="#Store" className="text-xs md:text-base transition-colors duration-300">Store</a></li>
-            <li><a href="#contactUs" className="text-xs md:text-base transition-colors duration-300">Contact Us</a></li>
+            <li><HashLink to="/#" className="text-xs md:text-base duration-300">Home</HashLink></li>
+            <li><HashLink to="/#aboutUs" className="text-xs md:text-base transition-colors duration-300">About Us</HashLink></li>
+            <li><HashLink to="/#Store" className="text-xs md:text-base transition-colors duration-300">Store</HashLink></li>
+            <li><HashLink to="/#contactUs" className="text-xs md:text-base transition-colors duration-300">Contact Us</HashLink></li>
           </ul>
         </div>
         <div className="max-w-24 md:flex flex-col items-center md:max-w-[250px]">

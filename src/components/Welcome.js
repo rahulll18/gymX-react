@@ -12,7 +12,7 @@ const Welcome = () =>{
                 <p className="md:my-9 md:mt-3 mt-5 text-xs md:text-lg font-serif">
                 Discover a customized Approach to Achieve your fitness goals
                 </p>
-                <button className='bg-lime-400 md:mt-10 mt-14 md:my-0 hover:bg-lime-500 rounded-xl text-lg text-black px-16 py-5'><Link to='/login'>Get started <i className="ri-arrow-right-line ml-2"></i></Link></button>
+                <button className='bg-lime-400 w-64 md:mt-10 mt-14 md:my-0 hover:bg-lime-500 rounded-xl text-lg text-black px-16 py-5 transition-all duration-500 delay-150 ease-in hover:w-80'><Link to='/login'>Get started <i className="ri-arrow-right-line ml-2"></i></Link></button>
             </div>
             <div id="content_2" className="section_content flex items-center md:block">
                 <img src={homeImage} alt="HomeImage" width="600" className='' />
