@@ -3,8 +3,8 @@ import './App.css';
 import Home from './Home';
 import Login from './components/Authentication/Login';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css';
+import Products from './components/Products/Products';
 AOS.init();
 
 const App =() => {
@@ -13,7 +13,8 @@ const App =() => {
      
       <Routes>
         <Route path='/' index element={<Home/>} />
-        <Route path='/login' index element={<Login/>} />
+        <Route path='/login'  element={<Login/>} />
+        <Route path='/products'  element={<Products/>} />
       </Routes>
      
     </div>
