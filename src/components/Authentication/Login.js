@@ -13,14 +13,14 @@ const Login = () => {
             type="email"
             name="email"
             placeholder="Email"
-            className="p-3 rounded bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white focus:bg-gray-700"
+            className="p-3 rounded bg-gray-900 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           />
           <p className="text-red-500 text-sm hidden">Email is required</p>
           <input
             type="password"
             name="password"
             placeholder="Password"
-            className="p-3 rounded bg-gray-700 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white focus:bg-gray-700"
+            className="p-3 rounded bg-gray-900 text-gray-300 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-white"
           />
           <p className="text-red-500 text-sm hidden">Password is required</p>
           <button
@@ -32,9 +32,6 @@ const Login = () => {
         </form>
         <p className="mt-6 text-center text-gray-400">
           Don't have an account?{' '}
-          {/* <a href="Register.html" className="text-gray-100 hover:text-yellow-500 transition-colors">
-            Register here
-          </a> */}
           <Link to='/register' className='text-lime-400 hover:text-lime-400 transition-colors'>Register here</Link>
         </p>
       </div>

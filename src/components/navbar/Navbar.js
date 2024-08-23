@@ -40,11 +40,11 @@ const Navbar = () => {
         </button>
       </div>
 
-      { !show ? <div className='md:hidden mr-3 z-0  fixed right-2 inline top-3'>
-          <i class="ri-menu-3-line w-full text-xl" onClick={() => setShow(!show)}></i>
+      { !show ? <div className='md:hidden mr-3 z-0 fixed right-2 inline top-3'>
+          <i class="ri-menu-3-line w-full transition-transform  text-xl" onClick={() => setShow(!show)}></i>
      </div> :
 
-      <div className='absolute h-screen border border-1 w-1/2 bg-gray-900/50 backdrop-blur-md text-white top-0 right-0 z-10'>
+      <div className='fixed h-screen border border-1 w-1/2 bg-gray-900/50 backdrop-blur-md text-white top-0 left-full z-10 transition-transform hover:translate-x-[-200px] delay-150 duration-500'>
      <i onClick={() => setShow(!show)} class="ri-close-fill text-3xl block my-2"></i>
       
         <div className="sidenav flex flex-col items-center justify-center space-y-9 my-4">

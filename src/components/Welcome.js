@@ -15,7 +15,7 @@ const Welcome = () =>{
                 </p>
                 <button className='bg-lime-400 w-64 md:mt-10 mt-14 md:my-0 hover:bg-lime-500 rounded-xl text-lg text-black px-16 py-5 transition-all duration-500 delay-150 ease-in hover:w-80'><Link to='/login'>Get started <i className="ri-arrow-right-line ml-2"></i></Link></button>
             </div>
-            <div id="content_2" data-aos-delay="400" data-aos="fade-left" className="section_content flex items-center md:block">
+            <div id="content_2"  data-aos="fade-up" className="section_content flex items-center md:block">
                 <img src={homeImage} alt="HomeImage" width="600" className='' />
             </div>
         </div>

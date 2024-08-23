@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Home';
 import Login from './components/Authentication/Login';
+import Register from './components/Authentication/Register'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Products from './components/Products/Products';
@@ -14,6 +15,7 @@ const App =() => {
       <Routes>
         <Route path='/' index element={<Home/>} />
         <Route path='/login'  element={<Login/>} />
+        <Route path='/register'  element={<Register />} />
         <Route path='/products'  element={<Products/>} />
       </Routes>
      
