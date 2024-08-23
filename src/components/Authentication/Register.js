@@ -20,7 +20,7 @@ const RegistrationForm = () => {
 
   return (
     <div className='h-screen flex justify-center items-center'>
-    <div className=" md:w-full max-w-96  bg-gray-800 p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out">
+    <div className=" md:w-full max-w-96 border border-white  shadow-white bg-gray-800 p-6 rounded-lg transition-transform duration-300 ease-in-out">
       <h1 className="text-center font-bold text-3xl text-gray-100 transition-colors duration-300 ease-in-out hover:text-gray-200">Register</h1>
       <form id="registrationForm" className="flex flex-col" onSubmit={collectUserInfo}>
         <label htmlFor="fullName" className="text-lg mb-2 text-gray-400 transition-colors duration-300 ease-in-out hover:text-gray-300">Full Name</label>

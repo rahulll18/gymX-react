@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <div className="flex md:items-center items-start  justify-center min-h-screen bg-gray-900 ">
-      <div className="w-full md:max-w-md max-w-96 p-5 md:mt-0 mt-28 md:p-10 bg-gray-800 rounded-lg shadow-lg">
+      <div className="w-full md:max-w-md max-w-96 p-5 md:mt-0 mt-28 md:p-10 bg-gray-800 rounded-lg shadow-lg border border-white">
         <h2 className="text-3xl font-bold text-gray-100 text-center mb-10 hover:text-gray-300 transition-colors ">
           Login
         </h2>

@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="p-3 w-full bg-gray-900 fixed top-0  md:flex  md:h-[60px] md:p-[10px] md:items-center md:justify-between z-10">
+    <nav className="p-3 w-full bg-gray-900 fixed top-0  md:flex  md:h-[60px] md:p-[10px] md:items-center md:justify-between z-10 shadow-sm shadow-white">
       <HashLink to="/" className="md:ml-12 inline md:flex md:justify-center text-base text-black font-bold md:text-lg no-underline ">
         <img src={img} alt="GymX Logo" className="w-7 md:w-[25px] inline" />
         <span className='text-white'>GymX</span>

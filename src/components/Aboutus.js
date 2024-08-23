@@ -1,7 +1,7 @@
 const Aboutus = ()=>{
     return(
         <div id='aboutUs' data-aos="flip-left" className="md:h-screen scroll-my-[65px] md:scroll-my-[65px] flex justify-center items-center p-5 box-border z-0">
-            <div data-aos-delay="500" className="md:max-w-3xl max-h-[70%] md:max-h-[90%] max-w-sm text-center bg-gray-800 md:p-8 p-8  md:mt-0 rounded-lg shadow-lg transition-transform transform duration-300 hover:scale-105" data-aos="flip-left">
+            <div data-aos-delay="500" className="md:max-w-3xl max-h-[70%] md:max-h-[90%] max-w-sm text-center bg-gray-800 md:p-8 p-8  md:mt-0 rounded-lg shadow-xl shadow-lime-400 transition-transform transform duration-300 hover:scale-105" data-aos="flip-left">
                 <h1 className="text-3xl font-bold text-lime-500 mb-5 transition-colors">
                 About Us
                 </h1>
