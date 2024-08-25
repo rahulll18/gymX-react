@@ -3,7 +3,7 @@ import React from 'react'
 const Contactus = () => {
   return (
     <div id='contactUs' className='h-screen md:scroll-my-[65px] flex justify-center items-center p-7 box-border'>
-      <div className="w-full max-w-3xl bg-gray-800 p-8 rounded-lg shadow-lg hover:scale-105 hover:bg-gray-800 transition-transform duration-300 ease-in-out">
+      <div data-aos="fade-up" data-aos-delay="500" className="w-full max-w-3xl bg-gray-800 p-8 rounded-lg shadow-lg hover:scale-105 hover:bg-gray-800 transition-transform duration-300 ease-in-out">
         <h1 className="text-4xl mb-5 text-[hsl(79,63%,50%)] font-bold text-center transition-colors duration-300 ease-in-out">
           Contact Us
         </h1>
