@@ -18,7 +18,7 @@ const Products = () => {
   };
 
   return (
-    <div className="h-full z-0 bg-gray-900">
+    <div className="h-full z-0 text-white bg-gray-900">
       <Header />
       <div className="cloths py-20 font-serif">
         <div className="flex  bg-gray-900 justify-center p-3 fixed top-12 md:top-14 w-full">

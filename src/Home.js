@@ -8,7 +8,7 @@ import Header from "./components/header/Header";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="bg-gray-900 text-white" >
       <Header />
       <Welcome />
       <Aboutus />
