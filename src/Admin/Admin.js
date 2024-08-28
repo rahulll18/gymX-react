@@ -1,5 +1,5 @@
-import Adminproductcard from "./Adminproductcard";
-import { productsList } from "../components/Products/Productsdata/prductsData";
+import { productsList , columns } from "../components/Products/Productsdata/prductsData";
+import { Table } from "antd";
 
 const Admin = () => {
   return (
@@ -8,13 +8,8 @@ const Admin = () => {
         <div className="bg-gray-300 p-5 text-center font-semibold text-black shadow-md shadow-gray-400 text-xl ">
           All Products
         </div>
-        <div className="adminProducts flex justify-center items-center max-w-[85%] mx-auto">
-            <div className="flex flex-wrap p-4 z-0">
-                {productsList.map((product) => (
-                <Adminproductcard key={product.id} product={product} />
-            ))}
-            </div>
-        </div>
+       
+        <Table dataSource={productsList} columns={columns} />;
       </div>
     </div>
   );

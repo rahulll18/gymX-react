@@ -1,3 +1,11 @@
+// import { render } from "@testing-library/react";
+import
+{ Button }
+from
+"antd"
+;
+import { Link } from "react-router-dom";
+
 export const productsList = [
   {
     id:1,
@@ -240,3 +248,57 @@ export const productsList = [
     offerPrice: "36% off",
   },
 ];
+
+export const columns = [
+  {
+    title: 'id',
+    dataIndex: 'id',
+    key: 'id',
+  },
+  {
+    title: 'Product Name',
+    dataIndex: 'pHeading',
+    key: 'pHeading',
+  },
+  {
+    title: 'Description',
+    dataIndex: 'description',
+    key: 'description',
+  },
+  {
+    title: 'Image',
+    dataIndex: 'imgUrl',
+    key: 'imgUrl',
+    render: (text) => <img src={text} alt="Product" style={{ width: 70, height: 70 , borderRadius:"15px", borderColor : "black"}} />
+  },
+  {
+    title: 'Price',
+    dataIndex: 'price',
+    key: 'price',
+  },
+  {
+    title: 'StrikePrice',
+    dataIndex: 'strikePrice',
+    key: 'strikePrice',
+  },
+  {
+    title: 'OfferPrice',
+    dataIndex: 'offerPrice',
+    key: 'offerPrice',
+  },
+  {
+    title: 'Action',
+    dataIndex: 'id', // Use id instead of Action
+    key: 'Action',
+    render: (id) => (
+      <>
+        <Link to={`/admin/editproduct/${id}`}>
+          <Button className="text-black">Edit</Button>
+        </Link>
+        <Link to='#'>
+          <Button className="text-white bg-red-700 hover:border  hover:bg-whiteborder-red-600">Delete</Button>
+        </Link>
+      </>
+    )
+  },
+]

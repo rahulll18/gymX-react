@@ -27,7 +27,7 @@ const Adminproductcard = ({ product }) => {
         </div>
         <div className="flex justify-around w-full">
           <button className="px-4 py-1 border border-green-400 font-bold text-white rounded-lg  hover:bg-white hover:text-green-600">
-            <Link to={`/editproduct/${id}`}>
+            <Link to={`/admin/editproduct/${id}`}>
               Edit <i class="ri-edit-box-fill ml-2"></i>
             </Link>
           </button>

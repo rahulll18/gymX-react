@@ -15,6 +15,10 @@ import Addproduct from "./Admin/Addproduct";
 import Editform from "./Admin/Editform";
 import Layout from "./Layout";
 import Adminlayout from "./Adminlayout";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const router = createBrowserRouter([
   {

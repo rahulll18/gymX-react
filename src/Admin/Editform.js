@@ -9,6 +9,7 @@ const Editform = () => {
     productheading: "",
     productDescription: "",
     productPrice: "",
+    
     productStrike: "",
     productOffer: "",
   });
@@ -22,7 +23,7 @@ const Editform = () => {
     console.log(product);
   };
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen ml-[15%] flex justify-center items-center bg-gray-900">
     <div className=" max-w-96 border shadow-white shadow-lg bg-gray-800 p-7 rounded-lg ">
       <form
         id="registrationForm"

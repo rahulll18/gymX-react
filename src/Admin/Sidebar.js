@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
-    <div className='sidebar fixed w-[15%] bg-white text-black h-screen bg-gray-900/50 backdrop-blur-md'>
+    <div className='sidebar fixed w-[15%] bg-white text-black h-screen bg-gray-900/50 backdrop-blur-md border border-r-black'>
     <div className='heading mt-5 flex justify-center'>
     <img src={sideimg} className='w-5 mr-2'  alt='side'/>
     <h1 className='font-bold text-xl text-center '>GymX Admin</h1>
