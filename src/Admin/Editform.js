@@ -9,7 +9,6 @@ const Editform = () => {
     productheading: "",
     productDescription: "",
     productPrice: "",
-    
     productStrike: "",
     productOffer: "",
   });

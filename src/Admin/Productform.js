@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {addProduct} from './Product_crud'
 
 const Productform = () => {
     const [product,setproduct] = useState({
@@ -13,9 +14,15 @@ const Productform = () => {
         setproduct({...product , [e.target.id] : e.target.value});
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async(e)=>{
         e.preventDefault();
-        console.log(product);
+        const result = await addProduct(product);
+        
+        if(result != null){
+          window.alert("Product added Sunccessfully");
+        }else{
+          window.alert("Failed to add the Product");
+        }
     }
 
   return (

@@ -10,6 +10,7 @@
     "antd": "^5.20.3",
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "^10.4.20",
+    "axios": "^1.7.5",
     "postcss": "^8.4.41",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

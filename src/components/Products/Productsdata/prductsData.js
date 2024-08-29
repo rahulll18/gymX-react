@@ -248,51 +248,58 @@ export const productsList = [
     offerPrice: "36% off",
   },
 ];
-
+   // {
+    //   "productId": 1,
+    //   "productheading": "Stringer",
+    //   "productDescription": "Checks Stringer Ultimate Grey",
+    //   "productPrice": "Rs. 399",
+    //   "productStrike": "Rs. 900",
+    //   "productOffer": "60% off"
+    // }
 export const columns = [
   {
-    title: 'id',
-    dataIndex: 'id',
-    key: 'id',
+    title: 'productId',
+    dataIndex: 'productId',
+    key: 'productId',
   },
   {
     title: 'Product Name',
-    dataIndex: 'pHeading',
-    key: 'pHeading',
+    dataIndex: 'productheading',
+    key: 'productheading',
   },
   {
     title: 'Description',
-    dataIndex: 'description',
-    key: 'description',
+    dataIndex: 'productDescription',
+    key: 'productDescription',
   },
-  {
-    title: 'Image',
-    dataIndex: 'imgUrl',
-    key: 'imgUrl',
-    render: (text) => <img src={text} alt="Product" style={{ width: 70, height: 70 , borderRadius:"15px", borderColor : "black"}} />
-  },
+  // {
+  //   title: 'Image',
+  //   dataIndex: 'imgUrl',
+  //   key: 'imgUrl',
+  //   render: (text) => <img src={text} alt="Product" style={{ width: 70, height: 70 , borderRadius:"15px", borderColor : "black"}} />
+  // },
   {
     title: 'Price',
-    dataIndex: 'price',
-    key: 'price',
+    dataIndex: 'productPrice',
+    key: 'productPrice',
   },
   {
     title: 'StrikePrice',
-    dataIndex: 'strikePrice',
-    key: 'strikePrice',
+    dataIndex: 'productStrike',
+    key: 'productStrike',
   },
   {
-    title: 'OfferPrice',
-    dataIndex: 'offerPrice',
-    key: 'offerPrice',
+    title: 'Offer',
+    dataIndex: 'productOffer',
+    key: 'productOffer',
   },
   {
     title: 'Action',
-    dataIndex: 'id', // Use id instead of Action
+    dataIndex: 'productId', // Use id instead of Action
     key: 'Action',
-    render: (id) => (
+    render: (productId) => (
       <>
-        <Link to={`/admin/editproduct/${id}`}>
+        <Link to={`/admin/editproduct/${productId}`}>
           <Button className="text-black">Edit</Button>
         </Link>
         <Link to='#'>
