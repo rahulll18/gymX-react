@@ -12,11 +12,11 @@ import Register from "./components/Authentication/Register";
 import Products from "./components/Products/Products";
 import Admin from "./Admin/Admin";
 import Addproduct from "./Admin/Addproduct";
-import Editform from "./Admin/Editform";
 import Layout from "./Layout";
 import Adminlayout from "./Adminlayout";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import {getProductById} from './Admin/Product_crud';
 // ..
 AOS.init();
 
@@ -57,7 +57,10 @@ const router = createBrowserRouter([
       },
       {
         path: "editproduct/:productId",
-        element: <Editform />,
+        element: <Addproduct />,
+        loader : async({params}) =>{
+            return await getProductById(params.productId)
+        }
       },
     ],
   },

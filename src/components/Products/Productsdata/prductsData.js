@@ -1,6 +1,6 @@
 // import { render } from "@testing-library/react";
 import
-{ Button }
+{ Button , Popconfirm }
 from
 "antd"
 ;
@@ -248,15 +248,14 @@ export const productsList = [
     offerPrice: "36% off",
   },
 ];
-   // {
-    //   "productId": 1,
-    //   "productheading": "Stringer",
-    //   "productDescription": "Checks Stringer Ultimate Grey",
-    //   "productPrice": "Rs. 399",
-    //   "productStrike": "Rs. 900",
-    //   "productOffer": "60% off"
-    // }
-export const columns = [
+
+const toBase64 = (arr) => {
+  return btoa(
+    new Uint8Array(arr).reduce((data, byte) => data + String.fromCharCode(byte), '')
+  );
+};
+
+export const columns = (handleDelete) => [
   {
     title: 'productId',
     dataIndex: 'productId',
@@ -272,12 +271,20 @@ export const columns = [
     dataIndex: 'productDescription',
     key: 'productDescription',
   },
-  // {
-  //   title: 'Image',
-  //   dataIndex: 'imgUrl',
-  //   key: 'imgUrl',
-  //   render: (text) => <img src={text} alt="Product" style={{ width: 70, height: 70 , borderRadius:"15px", borderColor : "black"}} />
-  // },
+  {
+    title: 'Image',
+    dataIndex: 'ProductImage',
+    key: 'ProductImage ',
+    render: (ProductImage) => ProductImage ? (
+      <img 
+        src={`data:image/jpeg;base64,${toBase64(ProductImage?.data)}`} 
+        alt="Product" 
+        style={{ width: 70, height: 70, borderRadius: "15px", borderColor: "black" }} 
+      />
+    ) : (
+      <span>No Image</span>
+    ),
+  },
   {
     title: 'Price',
     dataIndex: 'productPrice',
@@ -295,16 +302,20 @@ export const columns = [
   },
   {
     title: 'Action',
-    dataIndex: 'productId', // Use id instead of Action
     key: 'Action',
-    render: (productId) => (
+    render: (text, record) => (
       <>
-        <Link to={`/admin/editproduct/${productId}`}>
+        <Link to={`/admin/editproduct/${record.productId}`}>
           <Button className="text-black">Edit</Button>
         </Link>
-        <Link to='#'>
-          <Button className="text-white bg-red-700 hover:border  hover:bg-whiteborder-red-600">Delete</Button>
-        </Link>
+        <Popconfirm
+          title="Are you sure you want to delete this product?"
+          onConfirm={() => handleDelete(record.productId)}
+          okText="Yes"
+          cancelText="No"
+        >
+          <Button className="text-white bg-red-700 hover:border hover:bg-white border-red-600">Delete</Button>
+        </Popconfirm>
       </>
     )
   },

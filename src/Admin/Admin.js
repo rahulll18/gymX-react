@@ -1,26 +1,30 @@
 import { useEffect, useState } from "react";
 import {  columns } from "../components/Products/Productsdata/prductsData";
 import { Table } from "antd";
-import {getProducts} from './Product_crud';
+import {getProducts , deleteProductById} from './Product_crud';
 
 const Admin = () => {
 
-  const [Allproducts , setAllProducts] = useState([
-    // {
-    //   "productId": 1,
-    //   "productheading": "Stringer",
-    //   "productDescription": "Checks Stringer Ultimate Grey",
-    //   "productPrice": "Rs. 399",
-    //   "productStrike": "Rs. 900",
-    //   "productOffer": "60% off"
-    // }
-  ]);
+  const [Allproducts , setAllProducts] = useState([]);
 
   const fetchProducts = async()=>{
       const products = await getProducts();
       console.log(products);
       setAllProducts(products);
   }
+
+  const handleDelete = async (productId) => {
+    const ans=window.confirm("Do you really want to delete??")
+    if(ans) {
+        const data=await deleteProductById(productId);
+        if(data.affectedRows>0){
+            window.alert("Product deleted Successfully")
+            fetchProducts();
+        }
+        else
+            window.alert("Something went wrong....")
+    }
+  };
 
   useEffect(()=>{
     fetchProducts();
@@ -33,7 +37,7 @@ const Admin = () => {
           All Products
         </div>
        
-        <Table dataSource={Allproducts} columns={columns} />
+        <Table dataSource={Allproducts} columns={columns(handleDelete)} rowKey="productId" />
       </div>
     </div>
   );
