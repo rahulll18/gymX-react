@@ -2,10 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
 import Login from "./components/Authentication/Login";
 import Register from "./components/Authentication/Register";
@@ -14,9 +11,14 @@ import Admin from "./Admin/Admin";
 import Addproduct from "./Admin/Addproduct";
 import Layout from "./Layout";
 import Adminlayout from "./Adminlayout";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-import {getProductById} from './Admin/Product_crud';
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+import { getProductById } from "./Admin/Product_crud";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+
 // ..
 AOS.init();
 
@@ -26,9 +28,9 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-         path: "",
-         element: <Home />,
-       },
+        path: "",
+        element: <Home />,
+      },
       {
         path: "login",
         element: <Login />,
@@ -48,9 +50,9 @@ const router = createBrowserRouter([
     element: <Adminlayout />,
     children: [
       {
-         path: "",
-         element: <Admin />,
-       },
+        path: "",
+        element: <Admin />,
+      },
       {
         path: "addproduct",
         element: <Addproduct />,
@@ -58,9 +60,9 @@ const router = createBrowserRouter([
       {
         path: "editproduct/:productId",
         element: <Addproduct />,
-        loader : async({params}) =>{
-            return await getProductById(params.productId)
-        }
+        loader: async ({ params }) => {
+          return await getProductById(params.productId);
+        },
       },
     ],
   },

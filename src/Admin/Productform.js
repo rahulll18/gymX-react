@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Product } from "./Product";
-import { addProduct , updateProductById } from "./Product_crud";
+import { addProduct, updateProductById } from "./Product_crud";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const Productform = () => {
   const prod = useLoaderData();
-  const [product, setProduct] = useState(()=>setInitialProduct());
+  const [product, setProduct] = useState(() => setInitialProduct());
   const [image, setImage] = useState(null);
   let { productId } = useParams();
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Productform = () => {
   const handleChange = (e) => {
     if (e.target.type === "file") {
       console.log(e.target.files[0]);
-      setImage(e.target.files[0]); 
+      setImage(e.target.files[0]);
     } else {
       setProduct({ ...product, [e.target.id]: e.target.value });
     }
@@ -43,26 +44,15 @@ const Productform = () => {
   };
 
   const updateProduct = async () => {
-    const data = await updateProductById(productId,product, image);
+    const data = await updateProductById(productId, product, image);
     console.log(data);
-    if(data.affectedRows>0){
+    if (data.affectedRows > 0) {
       window.alert(`Product updated successfully.....`);
-      navigate("/admin")
-  }
-  else
-      window.alert("something went wrong");
+      navigate("/admin");
+    } else window.alert("something went wrong");
   };
 
-  // const getProductId = async () => {
-  //   if (productId !== undefined) {
-  //     const productData = await getProductById(productId);
-  //     setProduct(productData);
-  //   }
-  // };
-
-  useEffect(() => {
-    //getProductId();
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className=" max-w-96 border h-1/2 mx-auto shadow-white shadow-lg bg-gray-800 p-4 rounded-lg ">
@@ -160,12 +150,13 @@ const Productform = () => {
           onChange={handleChange}
         />
 
-        <button
+        <Button
+          variant="contained"
           type="submit"
           className="mt-4 p-3 bg-gray-700 text-gray-100 rounded hover:bg-lime-400 hover:scale-105 transform transition-all"
         >
           Save Product
-        </button>
+        </Button>
       </form>
     </div>
   );
