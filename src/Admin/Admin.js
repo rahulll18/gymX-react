@@ -8,13 +8,16 @@ const Admin = () => {
   const [productId, setProductId] = useState(0);
 
   const fetchProductId = async () => {
-    console.log("Hello");
-    const product = await getProductById(productId);
-    setAllProducts([product]);
+    if (productId != undefined) {
+      const product = await getProductById(productId);
+      setAllProducts([product]);
+    }
   };
 
   const handleSearch = async () => {
-    await fetchProductId();
+    if (productId != undefined) {
+      await fetchProductId();
+    }
   };
 
   const fetchProducts = async () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Product } from "./Product";
 import { addProduct, updateProductById } from "./Product_crud";
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
@@ -49,10 +49,11 @@ const Productform = () => {
     if (data.affectedRows > 0) {
       window.alert(`Product updated successfully.....`);
       navigate("/admin");
-    } else window.alert("something went wrong");
+    } else {
+      window.alert("something went wrong");
+    }
   };
 
-  useEffect(() => {}, []);
 
   return (
     <div className=" max-w-96 border h-1/2 mx-auto shadow-white shadow-lg bg-gray-800 p-4 rounded-lg ">
