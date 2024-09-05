@@ -22,7 +22,7 @@ const Admin = () => {
 
   const fetchProducts = async () => {
     const products = await getProducts();
-    console.log(products);
+    // console.log(products);
     setAllProducts(products);
   };
 
